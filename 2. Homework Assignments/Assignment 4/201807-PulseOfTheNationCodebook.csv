@@ -1,0 +1,24 @@
+﻿Variable,Description
+gender,What gender do you identify with?
+age,What is your age?
+age_range,Age Range
+political_party,"In politics today, do you consider yourself a Democrat, a Republican, or Independent? (for Democrats and Republicans, probe: strong [Democrat/Republican] or not very strong [Democrat/Republican]?)"
+rep_change,"[If political_party = Republican] If scientific evidence proved that the policies favored by Democrats improved the economy, lowered crime, and made citizens more happy, would you become a Democrat?"
+dem_change,"[If political_party = Democrat] If scientific evidence proved that the policies favored by Republicans improved the economy, lowered crime, and made citizens more happy, would you become a Republican?"
+political_leaning,"Would you say you are liberal, conservative, or moderate? (for liberals and conservatives, probe: strong [liberal/conservative] or not very strong [liberal/conservative]?)"
+education,"What is your highest level of education? (High school or less, Some college, College degree, Graduate degree)"
+race,"What is your race? (white, black, latino, asian, other)"
+race_other,"If Other was selected for race, response for what race was."
+trump,"Do you approve, disapprove, or neither approve nor disapprove of how Donald Trump is handling his job as president? (for ""approve"" or ""disapprove,"" probe: strongly or somewhat?)"
+gov_air_water,Do you believe the government should make sure that Americans have access to clean air and drinking water?
+mandatory_election,Do you believe that voting in federal elections should be optional or mandatory?
+stereotypes,Do you believe it is morally wrong to endorse negative stereotypes about a group of people based on where they were born?
+respect_for_authority,Do you agree or disagree with the following statement: People need to have more respect for authority in this country.
+handout,And do you agree or disagree with this next statement: Nobody deserves a free handout from the government.
+climate_change,"Would you say that your opinions on climate change policy are well-informed, or not very well-informed?"
+epa,Would you support the elimination of the Environmental Protection agency?
+biz_regulations,"In general, do you believe that American businesses should resist government regulations that they perceive to be unfair?"
+nuclear_emissions,Do you believe that nuclear power plants produce carbon emissions that contribute to climate change?
+voter_turnout_help,"If more people turned out to vote in elections, do you think it would help the Democrats more, help the Republicans more, or make no difference?"
+america_heartland,"Do you believe the government should do more to help small, working class towns in America's heartland?"
+south_racist,"In general, would you say that people from the south are more racist than people from other parts of the country?"

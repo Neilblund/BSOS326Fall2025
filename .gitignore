@@ -1,0 +1,34 @@
+.Rproj.user
+*.Rproj
+.Rhistory
+2. Homework Assignments/Assignment 1
+2. Homework Assignments/Assignment 1/*Solutions
+2. Homework Assignments/Assignment 2
+2. Homework Assignments/Assignment 2/*Solutions
+2. Homework Assignments/Assignment 3/
+2. Homework Assignments/Assignment 3/*Solutions
+2. Homework Assignments/Assignment 4/
+2. Homework Assignments/Assignment 4*/Solutions
+/1. In-Class Work/Week 04 - Pandas
+/1. In-Class Work/Week 05 - aggregation and split-apply-combine
+/1. In-Class Work/Week 06 - Webscraping
+/1. In-Class Work/Week 07 - Messy Data
+/1. In-Class Work/Week 09 - Work Flow and Visualization
+/1. In-Class Work/Week 10 - Visualization
+/1. In-Class Work/Week 11 - Visualization and Text analysis
+/1. In-Class Work/Week 12 - Text Analysis
+/1. In-Class Work/Week 13 - Classification and ML
+/1. In-Class Work/Week 14 - Neural Networks
+Midterm/Midterm-Solutions.ipynb
+/Slides/*
+!/Slides/*.html
+*-checkpoint.ipynb
+*.docx
+*.png
+keys.yml
+keys.yml
+keys.yml
+.ipynb_checkpoints/keys-checkpoint.txt
+/.ipynb_checkpoints
+*.yml
+/1. In-Class Work/Week 03 - APIs/.ipynb_checkpoints
