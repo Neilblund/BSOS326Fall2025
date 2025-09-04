@@ -1616,7 +1616,7 @@ margin-right: 0; }
 <span id="cb13-4"><a href></a>timediff <span class="op">=</span> end_time <span class="op">-</span> start_time</span>
 <span id="cb13-5"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Function executed in </span><span class="sc">{</span>timediff<span class="sc">:.6f}</span><span class="ss"> seconds.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Function executed in 0.035859 seconds.</code></pre>
+<pre><code>Function executed in 0.035271 seconds.</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1633,7 +1633,7 @@ margin-right: 0; }
 <span id="cb15-9"><a href></a>timediff <span class="op">=</span> end_time <span class="op">-</span> start_time</span>
 <span id="cb15-10"><a href></a><span class="bu">print</span>(<span class="ss">f&quot;Function executed in </span><span class="sc">{</span>timediff<span class="sc">:.6f}</span><span class="ss"> seconds.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Function executed in 0.313610 seconds.</code></pre>
+<pre><code>Function executed in 0.301294 seconds.</code></pre>
 </div>
 </div>
 </div>
@@ -1644,11 +1644,13 @@ margin-right: 0; }
 
 <section id="a-note-on-loops-1" class="title-slide slide level1 center">
 <h1>A note on loops</h1>
+<div>
 <ul>
-<li><p>Standard Python is “interpreted at runtime” which means it has some additional overhead when running each command</p></li>
-<li><p>However, many Python functions (including <code>sum</code>) actually use compiled code from another language.</p></li>
-<li><p>The upshot: you still need loops for many things, but don’t make them unless you need them.</p></li>
+<li class="fragment"><p>Standard Python is “interpreted at runtime” which means it has some additional overhead when running each command</p></li>
+<li class="fragment"><p>However, many Python functions (including <code>sum</code>) actually use compiled code from another language.</p></li>
+<li class="fragment"><p>The upshot: you still need loops for many things, but don’t make them unless you need them.</p></li>
 </ul>
+</div>
 </section>
 
 <section id="control-flow" class="title-slide slide level1 center">
@@ -1792,8 +1794,8 @@ margin-right: 0; }
 <li><p>Pandas is a general-purpose data analysis library for python that we will use a lot in this class.</p></li>
 <li><p>Pandas uses two special structures</p>
 <ul>
-<li><p>Pandas <code>Series</code>, which are a kind of array with some extra features.</p></li>
-<li><p>Pandas <code>DataFrames</code>, which are tables where each column represents a series. Data frames can be heterogenous, so some columns might contain text and others might contain numbers.</p></li>
+<li>Pandas <code>Series</code>, which are a kind of array with some extra features.</li>
+<li>Pandas <code>DataFrames</code>, which are tables where each column represents a series. Data frames can be heterogenous, so some columns might contain text and others might contain numbers.</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
