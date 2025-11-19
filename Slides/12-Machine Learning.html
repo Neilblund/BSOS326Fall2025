@@ -3252,7 +3252,7 @@ R^2: 0.3407111812314362</code></pre>
 
 <section id="try-it-out" class="title-slide slide level2 center">
 <h2>Try it out</h2>
-<p>The <code>election_data.csv</code> file has some additional predictors that you might try to use. See if you can improve the results by either: including additional predictors, applying <a href="https://scikit-learn.org/stable/modules/preprocessing.html#">different transformations</a>, or using a different regression estimator (such as )</p>
+<p>The <code>election_data.csv</code> file has some additional predictors that you might try to use. See if you can improve the results by either: including additional predictors, applying <a href="https://scikit-learn.org/stable/modules/preprocessing.html#">different transformations</a>, or using a different regression estimator.</p>
 <p>Here’s the whole script together for reference:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -3603,12 +3603,12 @@ weighted avg       0.75      0.73      0.72        51</code></pre>
 <span id="cb31-24"><a href></a>X_test_scaled <span class="op">=</span> scaler.transform(X_test)</span>
 <span id="cb31-25"><a href></a></span>
 <span id="cb31-26"><a href></a><span class="co"># Apply logistic regression</span></span>
-<span id="cb31-27"><a href></a>logitmodel <span class="op">=</span> LogisticRegression(random_state<span class="op">=</span><span class="dv">0</span>).fit(X_train_scaled, train_y)</span>
+<span id="cb31-27"><a href></a>logitmodel <span class="op">=</span> LogisticRegression(random_state<span class="op">=</span><span class="dv">0</span>).fit(X_train_scaled, y_train)</span>
 <span id="cb31-28"><a href></a><span class="co"># predict using the testing data:</span></span>
 <span id="cb31-29"><a href></a>predictions <span class="op">=</span> logitmodel.predict(X_test_scaled)</span>
 <span id="cb31-30"><a href></a></span>
 <span id="cb31-31"><a href></a><span class="co"># make a confusion matrix</span></span>
-<span id="cb31-32"><a href></a>cm <span class="op">=</span> pd.crosstab(predictions, test_y, rownames<span class="op">=</span>[<span class="st">&#39;Prediction&#39;</span>], colnames<span class="op">=</span>[<span class="st">&#39;Actual Outcome&#39;</span>])</span>
+<span id="cb31-32"><a href></a>cm <span class="op">=</span> pd.crosstab(predictions, y_test, rownames<span class="op">=</span>[<span class="st">&#39;Prediction&#39;</span>], colnames<span class="op">=</span>[<span class="st">&#39;Actual Outcome&#39;</span>])</span>
 <span id="cb31-33"><a href></a></span>
 <span id="cb31-34"><a href></a><span class="bu">print</span>(cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3618,7 +3618,7 @@ Prediction
 1               11  21</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href></a><span class="co"># show the classification report</span></span>
-<span id="cb33-2"><a href></a><span class="bu">print</span>(classification_report(test_y, predictions, </span>
+<span id="cb33-2"><a href></a><span class="bu">print</span>(classification_report(y_test, predictions, </span>
 <span id="cb33-3"><a href></a>                            <span class="co"># add target_names to show labels in the report:</span></span>
 <span id="cb33-4"><a href></a>                            target_names<span class="op">=</span>[<span class="st">&#39;No attacks&#39;</span>, <span class="st">&#39;Attacks&#39;</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3631,11 +3631,11 @@ Prediction
    macro avg       0.75      0.73      0.72        51
 weighted avg       0.75      0.73      0.72        51</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="bu">print</span>(<span class="st">&quot;cohens kappa: &quot;</span>, cohen_kappa_score(test_y,  predictions))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href></a><span class="bu">print</span>(<span class="st">&quot;cohens kappa: &quot;</span>, cohen_kappa_score(y_test,  predictions))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>cohens kappa:  0.4590909090909091</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a><span class="bu">print</span>(<span class="st">&quot;balanced accuracy: &quot;</span>, balanced_accuracy_score(test_y, predictions))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href></a><span class="bu">print</span>(<span class="st">&quot;balanced accuracy: &quot;</span>, balanced_accuracy_score(y_test, predictions))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>balanced accuracy:  0.7337962962962963</code></pre>
 </div>
